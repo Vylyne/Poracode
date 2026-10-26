@@ -87,6 +87,8 @@ interface ChatPaneProps {
   checkpointProjectLocation?: ProjectLocation | undefined;
   initialScrollRevealDelayMs?: number | undefined;
   onInitialScrollSettled?: (() => void) | undefined;
+  /** Space a floating composer covers at the bottom; the list scrolls past it. */
+  bottomInset?: number | undefined;
 }
 
 const unavailableImageRefUrl = () => "";
@@ -589,6 +591,7 @@ export function ChatPane(props: ChatPaneProps) {
               threadId={threadId}
               entries={listEntries}
               isTurnActive={isLive}
+              {...(props.bottomInset ? { bottomInset: props.bottomInset } : {})}
               {...(isManagedThread
                 ? {
                     onInitialLayoutReady: () => {
