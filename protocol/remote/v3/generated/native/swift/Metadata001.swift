@@ -8,8 +8,8 @@ public enum RemoteContractMetadata {
   public static let protocolVersion = 14
   public static let bindingFormatVersion = 2
   public static let generatorVersion = 7
-  public static let sourceHash = "sha256:027a9cf40de12ba9ee9cfc374b3352054ff15b65d23b6d682bf49b413d8522cd"
-  public static let manifestHash = "sha256:18b76a337bdc91d98475d116d7501e948d79900013ffee2a34b1f4fa17cd1c3c"
+  public static let sourceHash = "sha256:2ca73a56e36012d4eabe85960622247e6471bb486be6d4e0f0c1f735790940d6"
+  public static let manifestHash = "sha256:0af95549f6385c5f08e5dfeb224d10486c18d5b19acb6ba934351dbea0e0dea4"
   public static let validationBoundary: RemoteValidationBoundary = .rootCodecOnly
   public static let generatedModelCodableSemantics: RemoteGeneratedSerializerSemantics = .nonValidatingRepresentationOnly
   public static let portableTransformIds = ["agent-settings.strip-sensitive", "push.routing.client-connection-id.lowercase", "string.trim"]
@@ -131,7 +131,7 @@ public enum RemoteContractMetadata {
     .init(id: "thread-steer-clear", method: "POST", path: "/api/threads/{threadId}/steer/clear", auth: "bearer", scopes: ["session:operate"], bodyKind: "json", responseKind: "json", status: 200, requestType: "RoutehostU2DUpdateU2DInstallResponse_81055c9199", responseType: "RoutedeviceU2DDetachResponse_badd682f35", queryCodecs: []),
     .init(id: "thread-steer-set", method: "POST", path: "/api/threads/{threadId}/steer/set", auth: "bearer", scopes: ["session:operate"], bodyKind: "json", responseKind: "json", status: 200, requestType: "RoutethreadU2DSteerU2DSetRequest_0c65944950", responseType: "RoutedeviceU2DDetachResponse_badd682f35", queryCodecs: []),
     .init(id: "thread-turns", method: "GET", path: "/api/threads/{threadId}/turns", auth: "bearer", scopes: ["session:read"], bodyKind: "empty", responseKind: "json", status: 200, requestType: "RemoteUnit", responseType: "RoutethreadU2DTurnsResponse_1f8c0bbd10", queryCodecs: [.init(name: "reads", kind: "string", optional: true, repeated: false), .init(name: "notices", kind: "string", optional: true, repeated: false), .init(name: "cursor", kind: "string", optional: true, repeated: false), .init(name: "limit", kind: "int", optional: true, repeated: false), .init(name: "completedTurnsLimit", kind: "int", optional: true, repeated: false), .init(name: "maxBytes", kind: "int", optional: true, repeated: false), .init(name: "maxDecodeBytes", kind: "int", optional: true, repeated: false)]),
-    .init(id: "token-exchange", method: "POST", path: "/oauth/token", auth: "pairing-token", scopes: [], bodyKind: "json", responseKind: "json", status: 200, requestType: "RoutetokenU2DExchangeRequest_39bc2baf33", responseType: "RoutetokenU2DExchangeResponse_6da7b36735", queryCodecs: []),
+    .init(id: "token-exchange", method: "POST", path: "/oauth/token", auth: "pairing-token", scopes: [], bodyKind: "json", responseKind: "json", status: 200, requestType: "RoutetokenU2DExchangeRequest_39bc2baf33", responseType: "RoutetokenU2DExchangeResponse_22f14841c0", queryCodecs: []),
     .init(id: "websocket-ticket", method: "POST", path: "/api/auth/websocket-ticket", auth: "bearer", scopes: ["session:read"], bodyKind: "empty", responseKind: "json", status: 200, requestType: "RemoteUnit", responseType: "RouteenvironmentU2DWebsocketU2DTicketResponse_b9dfb5a053", queryCodecs: []),
   ]
   public static let procedures: [RemoteProcedureDescriptor] = [
